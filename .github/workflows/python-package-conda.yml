@@ -27,10 +27,8 @@ jobs:
     - name: Lint with flake8
       run: |
         conda install -y flake8
-        # Ignore virtual environment and other non-code folders
-        flake8 . --exclude=.venv310,.venv,__pycache__,.git,.ipynb_checkpoints --count --select=E9,F63,F7,F82 --show-source --statistics
-        flake8 . --exclude=.venv310,.venv,__pycache__,.git,.ipynb_checkpoints --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-
+        flake8 . --exclude=venv310,.venv,venv,__pycache__,.git,.ipynb_checkpoints --count --select=E9,F63,F7,F82 --show-source --statistics
+        flake8 . --exclude=venv310,.venv,venv,__pycache__,.git,.ipynb_checkpoints --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 
     - name: Test with pytest
       run: |
