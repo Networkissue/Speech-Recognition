@@ -14,7 +14,7 @@ The objective of the project is to convert speech to text in real time and conve
 - speech_recognition
 - google speech api
 
-## activate env
+## Activate env
 
 - speechenv
 - venv310
