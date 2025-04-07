@@ -1,0 +1,17 @@
+# Avoids interactive prompts during installation of packages (e.g., timezone setup), so the Docker build won’t get stuck waiting for user input.
+
+# install system dependencies, build-essential: tools to compile Python packages like pyaudio.
+
+# portaudio19-dev: required for PyAudio to access microphone/audio.
+
+# ffmpeg: useful for audio processing (e.g., converting formats).
+
+# rm -rf /var/lib/apt/lists/*: clean-up to reduce image size.
+
+# --ip=0.0.0.0: makes it accessible from outside the container.
+
+# --port=8888: binds to the exposed port.
+
+# --no-browser: doesn’t try to launch a browser inside the container.
+
+# --allow-root: allows Jupyter to run as root (needed inside most containers).
